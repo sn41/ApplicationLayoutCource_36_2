@@ -36,23 +36,11 @@ import kz.misal.alc.ui.theme.ApplicationLayoutCource_36_2Theme
 
 @Composable
 fun MainScreen() {
-    var text by remember { mutableStateOf("Привет лунатикам!") }
-    var inputText by remember { mutableStateOf("") }
-    Box(Modifier.fillMaxSize()){
-        Column(Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
-            OutlinedTextField(
-                inputText,
-                {newString -> inputText=newString},
-                modifier = Modifier.fillMaxWidth().padding(start = 16.dp, end = 16.dp)
-            )
-            Text(text = text)
-        }
-        Button({
-            text = inputText
-            inputText = ""
-        }, modifier = Modifier.align(Alignment.BottomEnd).padding(bottom = 32.dp, end = 16.dp)) {
-            Text ("Жми")
-        }
+    Column() {
+        Text(
+            text = "Привет лунатикам!",
+        )
+        Button({}) { }
     }
 }
 
@@ -63,28 +51,3 @@ fun GreetingPreview() {
         MainScreen()
     }
 }
-
-//val brush = Brush.linearGradient(listOf<Color>(Color.Red, Color.White))
-//val shape = RoundedCornerShape(4.dp, 16.dp, 32.dp, 48.dp)
-//Button(
-//{},
-//shape = shape,
-//colors = ButtonColors(
-//containerColor = Color.Red,
-//contentColor = Color.White,
-//disabledContainerColor = Color.LightGray,
-//disabledContentColor = Color.DarkGray
-//),
-//elevation = ButtonDefaults.buttonElevation(
-//defaultElevation = 2.dp,
-//pressedElevation = -(2).dp,
-//focusedElevation = 2.dp,
-//hoveredElevation = 1.dp,
-//disabledElevation = 1.dp
-//),
-//border = BorderStroke(width = 2.dp, brush)
-//) {
-//    Text("Жми!")
-//    Spacer(Modifier.width(4.dp))
-//    Box(Modifier.clip(shape).size(16.dp).background(brush))
-//}
