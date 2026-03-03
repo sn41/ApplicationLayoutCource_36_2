@@ -245,3 +245,13 @@ fun MainScreen() {
 
 Доработайте дизайн странички по своему вкусу.
 
+Изучите материал:
+
+[Управление состоянием](https://developer.android.com/develop/ui/compose/state)
+
+
+
+
+
+/
+
